@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(248, 249, 250);
+  }
+
+  #imglogin{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+  }
+
+  .formsesion h1{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-control{
+    width: 20vw;
+    display: flex;
+    margin:0 40vw;
+  }
+  .form-floating{
+margin-right: 50px;
+  }
+  .btn-primary{
+    background-color: rgb(255, 149, 10);
+  }
+
+  .jap a {
+color:rgb(255, 149, 10);
+font-style: bold;
+
+  }
+  .float-end a {
+    color:rgb(255, 149, 10);
+font-style: bold
+  }
