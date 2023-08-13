@@ -18,6 +18,7 @@ body {
     border-radius: 200px;
     border: 5px solid;
     margin-left: 5px;
+    box-shadow: 2px 4px 6px;
 }
 
 .formsesion h1 {
@@ -32,10 +33,12 @@ body {
 
 .formulario input {
     border: 2px solid;
+    box-shadow: 1px 3px 5px;
 }
 
 .formulario button {
     margin: 0 5vw;
+    box-shadow: 1px 3px 5px;
 }
 
 .form-control {
@@ -54,6 +57,7 @@ body {
     color: black;
     font-style: bold;
     border: 2px solid;
+    box-shadow: 1px 3px 5px;
 }
 
 .jap a {
