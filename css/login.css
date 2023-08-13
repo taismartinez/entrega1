@@ -52,7 +52,6 @@ body {
 }
 
 .btn-primary {
-    /*background-color: rgb(190, 108, 1);*/
     background-color: white;
     color: black;
     font-style: bold;
@@ -61,7 +60,6 @@ body {
 }
 
 .jap a {
-    /*color:rgb(255, 149, 10);*/
     color: black;
     font-style: bold;
 }
@@ -69,7 +67,6 @@ body {
     color:black;
 }
 .float-end a {
-    /*color:rgb(255, 149, 10);*/
     color: black;
     font-style: bold;
 }
