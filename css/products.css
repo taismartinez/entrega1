@@ -1,0 +1,38 @@
+*{
+    list-style-type: none;
+}
+h2{
+    margin-top: 30px;
+}
+
+h4{
+    margin-bottom: 40px;
+}
+.container{
+    text-align: center;
+}
+#prod-name-cost{
+    flex-wrap: wrap;
+}
+#mostrar-productos ul li{
+    padding-left: 120px;
+    justify-content: center;
+}
+
+.product-soldcount{
+    font-size: 10px;
+    text-align: right;
+
+}
+.product-img img{
+    display: flex;
+    float: left;
+    text-align: left;
+    justify-content: left;
+}
+.product-name{}
+.product-desc{
+    margin: 0 ;
+    padding: 0 90px 0 160px;
+}
+
