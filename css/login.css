@@ -33,7 +33,7 @@ body {
 }
 
 .formulario button {
-    margin: 0 5vw;
+    margin: 0 4vw;
     box-shadow: 1px 3px 5px;
 }
 
@@ -57,7 +57,19 @@ body {
 #obligatorio, #obligatorio1, #obligatorio2{
     display: none;
 }
+#alerta1{
+    display: none;
+    background-color: rgb(248, 51, 2) ;
+    color: black;
+    width: 500px;
+}
 
+#alerta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 /*Footer*/
 .jap a {
     color: black;
