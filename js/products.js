@@ -8,12 +8,12 @@ function obtenerAutos(){
                 let prod = infoApi.products
     
                for (let i = 0; i < prod.length; i++) {
-                   producto.innerHTML += `<ul><div>
-                   <div id=prod-name-cost><li>${prod[i].name} - ${prod[i].currency}  ${prod[i].cost}</li> </div>   
-                   <li><div class=product-img ><img src=${prod[i].image} style= max-width:20vh></div></li>
-                   <li class=product-desc>${prod[i].description}</li>  
-                   <li class=product-soldcount>${prod[i].soldCount} vendidos</li></div>  
-                    </ul>`;
+                   producto.innerHTML += `<div>
+                   <div>${prod[i].name} - ${prod[i].currency}  ${prod[i].cost}</div>   
+                   <div><img src=${prod[i].image} style= max-width:20vh></div>
+                   ${prod[i].description}  
+                   ${prod[i].soldCount} vendidos</div>`;
+                   
                   
                }
             }); 
