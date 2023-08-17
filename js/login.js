@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 document.getElementById("boton").addEventListener("click", validarRegistro);
 
 //Validar Registro
@@ -50,4 +48,3 @@ function validarRegistro(e) {
     }
   }
 }
->>>>>>> Stashed changes
