@@ -20,3 +20,11 @@ function logearse(e) {
 }
 
 logearse();
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "b") {
+    localStorage.clear();
+
+    alert("LocalStorage ha sido borrado.");
+  }
+});
