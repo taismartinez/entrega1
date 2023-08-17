@@ -11,6 +11,8 @@ function validarRegistro(e){
     let expresion = /\w+@+\w+\.+[a-z]/
     
      if(expresion.test(correo) && contraseña.length >= 6 && checkbox.checked){
+      localStorage.setItem("correo", correo )
+      localStorage.setItem("pass", contraseña)
        window.open("index.html");
       }else if(!expresion.test(correo) && (contraseña.length >= 6 && checkbox.checked)) {
         document.getElementById("obligatorio").style.display = 'block';
