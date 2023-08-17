@@ -1,10 +1,6 @@
 body {
-    background-color: rgb(248, 249, 250);
-    color: black;
-}
-
-body {
     background-color: rgb(247, 162, 84);
+    color: black;
 }
 
 #imglogin {
@@ -20,7 +16,7 @@ body {
     margin-left: 5px;
     box-shadow: 2px 4px 6px;
 }
-
+/*Formulario*/
 .formsesion h1 {
     font-size: 30px;
     display: flex;
@@ -37,7 +33,7 @@ body {
 }
 
 .formulario button {
-    margin: 0 5vw;
+    margin: 0 4vw;
     box-shadow: 1px 3px 5px;
 }
 
@@ -58,7 +54,23 @@ body {
     border: 2px solid;
     box-shadow: 1px 3px 5px;
 }
+#obligatorio, #obligatorio1, #obligatorio2{
+    display: none;
+}
+#alerta1{
+    display: none;
+    background-color: rgb(248, 51, 2) ;
+    color: black;
+    width: 500px;
+}
 
+#alerta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/*Footer*/
 .jap a {
     color: black;
     font-style: bold;
@@ -74,3 +86,4 @@ body {
 .container {
     margin: 0px;
 }
+
