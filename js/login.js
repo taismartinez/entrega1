@@ -50,12 +50,9 @@ function validarRegistro(e) {
 }
 
 document.addEventListener("keydown", function (event) {
-  // Verifica si la tecla presionada es la tecla "B" (puedes usar otra tecla si lo prefieres)
   if (event.key === "b") {
-    // Borra todo el contenido del LocalStorage
     localStorage.clear();
 
-    // Muestra un mensaje de confirmación
     alert("LocalStorage ha sido borrado.");
   }
 });
