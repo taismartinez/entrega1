@@ -42,7 +42,7 @@ function validarRegistro(e) {
     document.getElementById("alerta1").style.display = "block";
     e.preventDefault();
 
-    if (!localStorage.name|| !localStorage.contraseña) {
+    if (!localStorage.getItem("correo") || !localStorage.getItem("pass")) {
       window.location.href = "login.html";
     }
     }
