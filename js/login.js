@@ -11,7 +11,7 @@ function validarRegistro(e) {
   if (expresion.test(correo) && contraseña.length >= 6 && checkbox.checked) {
     localStorage.setItem("correo", correo);
     localStorage.setItem("pass", contraseña);
-    window.open("index.html");
+    window.location.href = "index.html";
   } else if (
     !expresion.test(correo) &&
     contraseña.length >= 6 &&
@@ -43,11 +43,14 @@ function validarRegistro(e) {
     document.getElementById("alerta1").style.display = "block";
     e.preventDefault();
 
-    if (!localStorage.getItem("correo") || !localStorage.getItem("pass")) {
+    if (!localStorage.name|| !localStorage.contraseña) {
       window.location.href = "login.html";
+      alert(localStorage.name);
+      alert(localStorage.contraseña)
+    }
     }
   }
-}
+
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "b") {
