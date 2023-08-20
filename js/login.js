@@ -4,7 +4,6 @@ document.getElementById("boton").addEventListener("click", validarRegistro);
 function validarRegistro(e) {
   let correo = document.getElementById("floatingInput3").value;
   let contraseña = document.getElementById("exampleInputPassword1").value;
-  let alerta = document.getElementById("alerta");
   const checkbox = document.getElementById("exampleCheck1");
   let expresion = /\w+@+\w+\.+[a-z]/;
 
@@ -45,8 +44,6 @@ function validarRegistro(e) {
 
     if (!localStorage.name|| !localStorage.contraseña) {
       window.location.href = "login.html";
-      alert(localStorage.name);
-      alert(localStorage.contraseña)
     }
     }
   }
