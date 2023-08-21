@@ -6,13 +6,43 @@ function validarRegistro(e) {
   let contraseña = document.getElementById("exampleInputPassword1").value;
   let alerta = document.getElementById("alerta");
   const checkbox = document.getElementById("exampleCheck1");
-  let expresion = /\w+@+\w+\.+[a-z]/;
 
-  if (expresion.test(correo) && contraseña.length >= 6 && checkbox.checked) {
+
+ let fallo = false;
+
+document.getElementById("obligatorio").style.display = "none";
+document.getElementById("obligatorio1").style.display = "none";
+document.getElementById("obligatorio2").style.display = "none";
+document.getElementById("alerta1").style.display = "none";
+
+  if(correo.indexOf("@") == -1){
+    document.getElementById("obligatorio").style.display = "block";
+    document.getElementById("alerta1").style.display = "block";
+    e.preventDefault();
+    fallo = true;
+  }
+  if(contraseña.length < 6){
+
+    document.getElementById("obligatorio1").style.display = "block";
+    document.getElementById("alerta1").style.display = "block";
+    e.preventDefault();
+    fallo = true;
+  }
+  if(!checkbox.checked){
+    document.getElementById("obligatorio2").style.display = "block";
+    document.getElementById("alerta1").style.display = "block";
+    e.preventDefault();
+    fallo = true;
+  }
+
+  if (!fallo) {
+    e.preventDefault();
     localStorage.setItem("correo", correo);
     localStorage.setItem("pass", contraseña);
-    window.location.href = "index.html";
-  } else if (
+    window.location.href = "/index.html";
+  } 
+
+  /*else if (
     !expresion.test(correo) &&
     contraseña.length >= 6 &&
     checkbox.checked
@@ -29,6 +59,7 @@ function validarRegistro(e) {
     document.getElementById("alerta1").style.display = "block";
     e.preventDefault();
   } else if (
+    
     expresion.test(correo) &&
     contraseña.length >= 6 &&
     !checkbox.checked
@@ -44,11 +75,10 @@ function validarRegistro(e) {
     e.preventDefault();
 
     if (!localStorage.name|| !localStorage.contraseña) {
-      window.location.href = "login.html";
-      alert(localStorage.name);
-      alert(localStorage.contraseña)
+      e.preventDefault();
+  
     }
-    }
+    }*/
   }
 
 
