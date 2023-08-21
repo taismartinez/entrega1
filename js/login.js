@@ -4,6 +4,7 @@ document.getElementById("boton").addEventListener("click", validarRegistro);
 function validarRegistro(e) {
   let correo = document.getElementById("floatingInput3").value;
   let contraseña = document.getElementById("exampleInputPassword1").value;
+  let alerta = document.getElementById("alerta");
   const checkbox = document.getElementById("exampleCheck1");
 
 
@@ -34,14 +35,12 @@ document.getElementById("alerta1").style.display = "none";
     fallo = true;
   }
 
-
   if (!fallo) {
     e.preventDefault();
     localStorage.setItem("correo", correo);
     localStorage.setItem("pass", contraseña);
-    window.location.href = "/index.html";
-  }
-
+    window.location.href = "index.html";
+  } 
   }
 
 
