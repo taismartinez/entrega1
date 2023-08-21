@@ -13,6 +13,7 @@ body {
     border-radius: 50px;
     align-items: center;
     margin: 0 auto !important;
+    box-shadow: 1px 1px 6px;
 }
 .redes img{
     border: none;
