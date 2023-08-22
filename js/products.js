@@ -1,6 +1,7 @@
-function obtenerAutos(){
+function obtenerProductos(){
+    const categoria = localStorage.getItem("catID")
     const producto = document.getElementById("mostrar-productos");
-    const promise = fetch("https://japceibal.github.io/emercado-api/cats_products/101.json");
+    const promise = fetch(`https://japceibal.github.io/emercado-api/cats_products/${categoria}.json`);
         promise
             .then(response => response.json())
             .then(infoApi => {
@@ -26,4 +27,4 @@ function obtenerAutos(){
             }); 
 };
                     // <li class=product-id>${prod[i].id}</li>
-obtenerAutos();
+obtenerProductos();
