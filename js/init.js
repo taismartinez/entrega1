@@ -40,6 +40,9 @@ let getJSONData = function(url){
     });
 }
 
+//Para sacar los datos del local storage 
+
+
 function logearse(e) {
   if (!localStorage.getItem("correo") || !localStorage.getItem("pass")) {
     window.location.href = "login.html";
