@@ -18,7 +18,6 @@ function logearse(e) {
     window.location.href = "login.html";
   }
 }
-
 logearse();
 
 document.addEventListener("keydown", function (event) {
@@ -28,3 +27,14 @@ document.addEventListener("keydown", function (event) {
     alert("LocalStorage ha sido borrado.");
   }
 });
+
+/* floatingInput3
+nav-item
+function storeEmail() {
+  let email = document.getElementsByClassName("floatingInput3").value;
+  localStorage.setItem ("correoElectronico", email);
+}*/
+let correo = document.getElementById("floatingInput3").value
+function storeEmail() {
+}
+sessionStorage
