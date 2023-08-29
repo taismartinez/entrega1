@@ -33,13 +33,14 @@ nav-item
 function storeEmail() {
   let email = document.getElementsByClassName("floatingInput3").value;
   localStorage.setItem ("correoElectronico", email);
-}*/
+}
 let correo = document.getElementById("floatingInput3").value
 function storeEmail() {
 }
-sessionStorage
+sessionStorage*/
 
-
+const email= document.getElementById("email");
 let userEmail= localStorage.getItem("correo");
-let navigationBar= document.getElementById("email");
-navigationBar.innerHTML= correo;
+console.log(localStorage.getItem("correo"));
+email.innerHTML= userEmail;
+email.href="myprofile.html";
