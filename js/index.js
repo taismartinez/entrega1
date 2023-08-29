@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+<<<<<<< HEAD
 function logearse(e) {
   if (!localStorage.getItem("correo") || !localStorage.getItem("pass")) {
     window.location.href = "login.html";
@@ -38,3 +39,5 @@ let correo = document.getElementById("floatingInput3").value
 function storeEmail() {
 }
 sessionStorage
+=======
+>>>>>>> TESTING
