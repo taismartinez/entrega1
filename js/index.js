@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-<<<<<<< HEAD
 function logearse(e) {
   if (!localStorage.getItem("correo") || !localStorage.getItem("pass")) {
     window.location.href = "login.html";
@@ -34,10 +33,14 @@ nav-item
 function storeEmail() {
   let email = document.getElementsByClassName("floatingInput3").value;
   localStorage.setItem ("correoElectronico", email);
-}*/
+}
 let correo = document.getElementById("floatingInput3").value
 function storeEmail() {
 }
-sessionStorage
-=======
->>>>>>> TESTING
+sessionStorage*/
+
+const email= document.getElementById("email");
+let userEmail= localStorage.getItem("correo");
+console.log(localStorage.getItem("correo"));
+email.innerHTML= userEmail;
+email.href="myprofile.html";
