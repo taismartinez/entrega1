@@ -38,3 +38,10 @@ if (catid ==="101") {
 } else if (catid ==="103") {
     document.getElementById("categories").innerHTML = "Muebles";
 }
+
+
+const email= document.getElementById("email");
+let userEmail= localStorage.getItem("correo");
+console.log(localStorage.getItem("correo"));
+email.innerHTML= userEmail;
+email.href="myprofile.html";
