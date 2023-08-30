@@ -28,19 +28,5 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-/* floatingInput3
-nav-item
-function storeEmail() {
-  let email = document.getElementsByClassName("floatingInput3").value;
-  localStorage.setItem ("correoElectronico", email);
-}
-let correo = document.getElementById("floatingInput3").value
-function storeEmail() {
-}
-sessionStorage*/
 
-const email= document.getElementById("email");
-let userEmail= localStorage.getItem("correo");
-console.log(localStorage.getItem("correo"));
-email.innerHTML= userEmail;
-email.href="myprofile.html";
+
