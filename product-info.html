@@ -30,19 +30,41 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html" id="email">Iniciar Sesión</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
-  </main>
+<!--PONER ACÁ LOS COMENTARIOS CON LAS ESTRELLAS-->
+    
+<div id="Comentarios">
+  <form>
+      <h3> Comentar:</h2>
+      <label for="text">Tu opinión:</label>
+      <br>
+      <textarea class="form-control" placeholder="Escribe aquí tu comentario..." id="floatingTextarea"></textarea>
+      <br>
+      <label for="text">Tu puntuación:</label>
+      <select name="opciones" id="opciones">
+        <option value="opcion1">1</option>
+        <option value="opcion2">2</option>
+        <option value="opcion3">3</option>
+        <option value="opcion4">4</option>
+        <option value="opcion4">5</option>
+      </select>
+      <br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+
+
+
+
+
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -62,6 +84,8 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+
+
 </body>
 
 </html>
