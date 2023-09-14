@@ -1,8 +1,9 @@
 /*la informacion de los productos*/
 #infoProd {
     margin: 10px;
-    border: 1px solid orangered;
-    box-shadow: 2px 2px 8px 4px orangered;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px 4px black;
+    border-radius: 20px;
 }
 
 #imgInfo {
@@ -34,9 +35,11 @@
     float: left;
     margin: 10px;
     margin: 10px;
-    border: 1px solid orangered;
-    box-shadow: 2px 2px 8px 4px orangered;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px 4px black;
     width: 50%;
+    background-color: white;
+    border-radius: 15px;
 }
 
 .comms {
@@ -70,9 +73,11 @@
     width: 45%;
     height: 260px;
     padding: 5px;
-    border: 1px solid orangered;
-    box-shadow: 2px 2px 8px 4px orangered;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px 4px black;
     font-family: 'Verdana', serif;
+    background-color: white;
+    border-radius: 15px;
 }
 
 h3 {
@@ -86,11 +91,24 @@ h3 {
     
 }
 button{
-    box-shadow: 2px 2px 8px 4px orangered;
+    box-shadow: 2px 2px 8px 4px black;
 }
 .container{
     float: left;
     margin: 10px;
     margin: 10px;
     width: 100%;
+}
+
+#opciones{
+    font-size: 15px; 
+}
+
+.form-control{
+width: 20vw;
+}
+
+.btn {
+    background-color: orangered;
+    border-color: orangered;
 }

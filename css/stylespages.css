@@ -1,0 +1,56 @@
+body {
+    background-color: orangered;
+  background: linear-gradient(45deg, red, orangered, rgb(235, 109, 6), rgba(215, 78, 54, 0.9));
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+.text-center{
+  background-color: white;
+  width: 40%;
+  height: 40%;
+  margin: 0 30vw;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px 2px black;
+  }
+
+  .form-control{
+    box-shadow: 2px 2px 8px 2px black;
+  }
+
+  #rangeFilterCount{
+    box-shadow: 2px 2px 8px 2px black;
+  }
+
+#clearRangeFilter{
+  box-shadow: 2px 2px 12px 2px black;
+}
+
+.btn-group{
+  box-shadow: 2px 2px 8px 2px black;
+}
+
+/*list-group-item list-group-item-action cursor-active */
+.categoriaCartas{
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 2px black;
+}
+
+.products{
+  background-color: white;
+  width: 50%;
+  height: 100px;
+  margin: 0 20vw;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px 2px black; 
+}
+
+#input-search{
+  font-size: 20px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 2px black;
+}
+}
