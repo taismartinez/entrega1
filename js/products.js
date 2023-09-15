@@ -13,7 +13,7 @@ function showProducts(){
                    product.innerHTML += `
                     <div class="container-prod" id="${prod[i].id}">
                         <div>
-                            <img id="div__img-prod" src=${prod[i].image} style= max-width:20vh>
+                            <img id="div__img-prod" src=${prod[i].image} style= max-width:25vh>
                         </div>
                         <div><h5> ${prod[i].name} - ${prod[i].currency}  ${prod[i].cost}</h5>
                             <div id="container__div-sold"> ${prod[i].soldCount} vendidos   </div>

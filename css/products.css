@@ -24,7 +24,7 @@
 }
 
 .container-prod{
-    margin: 0 200px;
+    margin: 5px 200px 30px;
     display: inline-flex;
     padding: 20px 50px;
     box-shadow: 2px 2px 8px 4px black;
