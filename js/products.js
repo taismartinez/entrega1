@@ -21,7 +21,7 @@ function callJSON() {
 }
 
 callJSON()
-namin.innerHTML = item[0].name;
+
 
 // Mostrar el producto
 function showProducts(item) {
