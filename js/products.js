@@ -1,5 +1,5 @@
 let catid = localStorage.getItem("catID");
-
+let nameProd = document.getElementById("categories");
 const product = document.getElementById("showProducts");
 let item = [];
 
@@ -11,6 +11,7 @@ function callJSON() {
         .then(infoApi => {
             item = infoApi.products;
             console.log(item);
+            nameProd.innerHTML = infoApi.catName; //Se le agrega el nombre a la categoria
             showProducts(item)
             filteredArray(item)
             sortElementsByPrice(item)
@@ -20,13 +21,15 @@ function callJSON() {
 }
 
 callJSON()
-
-
+namin.innerHTML = item[0].name;
 
 // Mostrar el producto
 function showProducts(item) {
+   
     product.innerHTML = "";
     for (let i = 0; i < item.length; i++) {
+        
+        
         product.innerHTML += `
          <div class="container-prod" id="${item[i].id}">
              <div>
