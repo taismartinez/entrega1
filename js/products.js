@@ -153,3 +153,4 @@ function selectedProduct(item){
 }
 
 showProducts();
+
