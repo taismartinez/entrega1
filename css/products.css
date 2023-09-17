@@ -30,9 +30,9 @@
     box-shadow: 2px 2px 8px 4px black;
     background-color: white;
     border-radius: 15px;
-    
-
-
+}
+.container-prod:hover {
+    cursor: pointer;
 }
 
 #container__div-sold{
