@@ -12,24 +12,22 @@ function callJSON() {
             item = infoApi.products;
             console.log(item);
             nameProd.innerHTML = infoApi.catName; //Se le agrega el nombre a la categoria
-            showProducts(item)
-            filteredArray(item)
-            sortElementsByPrice(item)
-
+            showProducts(item) // Función que muestra los Productos
+            filteredArray(item) // Función que filtra los elementos según el precio seleccionado
+            sortElementsByPrice(item) // Función que selecciona ordena los elementos según el precio 
+            selectedProduct(item) // Función que selecciona un elemento y te redirige a su información 
+            searchFilter(item) // Función que busca los elementos, en el buscador
+            
         })
         .catch(error => console.log(error))
 }
 
 callJSON()
 
-
 // Mostrar el producto
 function showProducts(item) {
-   
     product.innerHTML = "";
     for (let i = 0; i < item.length; i++) {
-        
-        
         product.innerHTML += `
          <div class="container-prod" id="${item[i].id}">
              <div>
@@ -123,13 +121,13 @@ function sortElementsByPrice(item) {
 
 
 // Agregar la búsqueda de productos en tiempo real
-function searchFilter(prod){
+function searchFilter(item){
     let inputSearch = document.getElementById("input-search");
     inputSearch.addEventListener("input", function(){
         let searched = inputSearch.value.toLowerCase();
         console.log(searched);
         product.innerHTML = "";
-        prod.forEach(element => {
+        item.forEach(element => {
         if ((element.name.toLowerCase().includes(searched)) || (element.description.toLowerCase().includes(searched))) {
                 product.innerHTML += `
                     <div id="container-prod">
@@ -146,7 +144,7 @@ function searchFilter(prod){
 }
 
 // Obtener el ID del producto seleccionado
-function selectedProduct(prod){
+function selectedProduct(item){
     product.addEventListener("click", (e) =>{
         let selectProd = e.target.closest(".container-prod").id; // closest busca hacia "atrás" el elemento que coincida
         localStorage.setItem("Id-Prod", selectProd)
@@ -155,4 +153,3 @@ function selectedProduct(prod){
 }
 
 showProducts();
-
