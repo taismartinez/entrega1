@@ -233,10 +233,8 @@ margin: 0 auto;
 .links{
   color: black;
 }
-.dropdown{
-  background-color:  rgb(36, 36, 36);
-  color: grey;
-}
+
+
 .dropdown-item{
   background-color:  rgb(36, 36, 36);
   color: grey;
@@ -250,6 +248,7 @@ margin: 0 auto;
   color: grey;
 }
 
-#email{
-  background-color: rgb(31, 31, 31);;
+.buttonemail{
+  background-color: rgb(31, 31, 31);
+  color: grey;
 }
