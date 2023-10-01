@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 });
 
-
+//Modo noche
 document.addEventListener("DOMContentLoaded", function() {
     const nightModeSwitch = document.getElementById("night-mode-switch");
     const nightModeStylesheet = document.getElementById("night-mode-stylesheet");
