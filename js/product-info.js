@@ -28,6 +28,7 @@ function callImg(img) {
         image1.src = `${img[0]}`;
         image1.classList.add(`d-block`); 
         image1.classList.add(`w-30`); 
+        image1.classList.add(`showImg`); 
         imgActive.appendChild(image1);
 
     for(let i = 1; i < img.length; i++){
@@ -39,6 +40,7 @@ function callImg(img) {
         image.src = `${img[i]}`;
         image.classList.add(`d-block`); 
         image.classList.add(`w-30`); 
+        image.classList.add(`showImg`); 
         div.appendChild(image);
         
     }
@@ -118,6 +120,7 @@ function showInfocomm(com) {
         containercomm.innerHTML += `
         
         <div class ="comms">
+       
         <p class ="name">${com[i].user}</p><!– Nombre –>
         <p class = "date">${com[i].dateTime}</p><!– Date –>
        
@@ -181,12 +184,13 @@ async function callJSONrel() {
 callJSONrel()
 function showInforel(rel) {
     
-   /* containerrel.innerHTML += ""
+   containerrel.innerHTML += ""
     for (let i = 0; i < rel.length; i++) {
         containerrel.innerHTML += `
         
         <div class ="rel" id="${rel[i].id}" >
-        <p class ="name">${rel[i].name}</p>
+        <div class ="name">  <p >${rel[i].name}</p> </div>
+       
       
         <div class = "img">
         
@@ -195,41 +199,9 @@ function showInforel(rel) {
         
         </div>
             `;
-    }*/
-
-    const container =  document.getElementById("container3");
-    const imgActive =  document.getElementById("imgActive1");
-
-    const image1 = document.createElement("img");
-        image1.src = `${rel[0].image}`;
-        image1.classList.add(`d-block`); 
-        image1.classList.add(`w-50`); 
-        imgActive.appendChild(image1);
-
-        
-
-    for(let i = 1; i < rel.length; i++){
-
-    console.log(rel)
-       // <p class ="name">${rel[i].name}</p>
-        const div = document.createElement("div");
-        div.classList.add(`carousel-item`);
-        div.setAttribute("id", `${rel[i].id}`);
-        container.appendChild(div);
-        //Parrafo para el nombre
-        const p = document.createElement("p");
-        p.textContent = `${rel[i].name}`
-        p.classList.add("carousel-item");
-        container.appendChild(p)
-        //Agrego Imagenes
-        const image = document.createElement("img");
-        image.src = `${rel[i].image}`;
-        image.classList.add(`d-block`); 
-        image.classList.add(`w-50`); 
-        div.appendChild(image);
-       
-        
     }
+
+   
 }
 
 
