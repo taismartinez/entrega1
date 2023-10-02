@@ -28,6 +28,7 @@ function callImg(img) {
         image1.src = `${img[0]}`;
         image1.classList.add(`d-block`); 
         image1.classList.add(`w-30`); 
+        image1.classList.add(`showImg`); 
         imgActive.appendChild(image1);
 
     for(let i = 1; i < img.length; i++){
@@ -39,6 +40,7 @@ function callImg(img) {
         image.src = `${img[i]}`;
         image.classList.add(`d-block`); 
         image.classList.add(`w-30`); 
+        image.classList.add(`showImg`); 
         div.appendChild(image);
         
     }
@@ -118,6 +120,7 @@ function showInfocomm(com) {
         containercomm.innerHTML += `
         
         <div class ="comms">
+       
         <p class ="name">${com[i].user}</p><!– Nombre –>
         <p class = "date">${com[i].dateTime}</p><!– Date –>
        
@@ -172,7 +175,8 @@ async function callJSONrel() {
         rel= data.relatedProducts
        
         console.log(rel)
-        return showInforel(rel)
+         showInforel(rel)
+         selectedRelProduct(rel)
     } catch (error) {
         console.log(error)
     }
@@ -181,13 +185,13 @@ async function callJSONrel() {
 callJSONrel()
 function showInforel(rel) {
     
-   /* containerrel.innerHTML += ""
+   containerrel.innerHTML += ""
     for (let i = 0; i < rel.length; i++) {
         containerrel.innerHTML += `
         
         <div class ="rel" id="${rel[i].id}" >
-        <p class ="name">${rel[i].name}</p>
-      
+        <div class ="name">  <p >${rel[i].name}</p> </div>
+       
         <div class = "img">
         
         <img src=${rel[i].image} style="width:40%">
@@ -195,54 +199,62 @@ function showInforel(rel) {
         
         </div>
             `;
-    }*/
-
-    const container =  document.getElementById("container3");
-    const imgActive =  document.getElementById("imgActive1");
-
-    const image1 = document.createElement("img");
-        image1.src = `${rel[0].image}`;
-        image1.classList.add(`d-block`); 
-        image1.classList.add(`w-50`); 
-        imgActive.appendChild(image1);
-
-        
-
-    for(let i = 1; i < rel.length; i++){
-
-    console.log(rel)
-       // <p class ="name">${rel[i].name}</p>
-        const div = document.createElement("div");
-        div.classList.add(`carousel-item`);
-        div.setAttribute("id", `${rel[i].id}`);
-        container.appendChild(div);
-        //Parrafo para el nombre
-        const p = document.createElement("p");
-        p.textContent = `${rel[i].name}`
-        p.classList.add("carousel-item");
-        container.appendChild(p)
-        //Agrego Imagenes
-        const image = document.createElement("img");
-        image.src = `${rel[i].image}`;
-        image.classList.add(`d-block`); 
-        image.classList.add(`w-50`); 
-        div.appendChild(image);
-       
-        
     }
+
+   
 }
 
 
-//
-function selectedProduct(rel){
+
+function selectedRelProduct(rel){
     containerrel.addEventListener("click", (e) =>{
-        let selectRel = e.target.closest(".rel").id; // closest busca hacia "atrás" el elemento que coincida
-        localStorage.setItem("relidprod", selectRel)
+        let selectProd = e.target.closest(".rel").id; // closest busca hacia "atrás" el elemento que coincida
+        console.log(selectProd)
+        localStorage.setItem("Id-Prod", selectProd)
         window.location = "product-info.html"
-        console.log(selectRel)
     } )
 }
 
+showInforel(rel);
+
+
+
+
+// Modo noche
+
+document.addEventListener("DOMContentLoaded", function() {
+    const nightModeSwitch = document.getElementById("night-mode-switch");
+    const nightModeStylesheet = document.getElementById("night-mode-stylesheet");
+  
+    // Función para activar o desactivar el modo nocturno
+    function toggleNightMode() {
+      nightModeStylesheet.disabled = !nightModeSwitch.checked;
+  
+      // Cambiar el texto del interruptor según el modo actual
+      if (nightModeSwitch.checked) {
+        nightModeSwitch.nextElementSibling.textContent = "Modo Diurno";
+      } else {
+        nightModeSwitch.nextElementSibling.textContent = "Modo Nocturno";
+      }
+  
+      // Guardar el estado del modo en localStorage
+      localStorage.setItem("nightMode", nightModeSwitch.checked);
+    }
+  
+    // Agregar el evento de cambio para el interruptor
+    nightModeSwitch.addEventListener("change", toggleNightMode);
+  
+    // Verificar el estado almacenado en localStorage al cargar la página
+    const storedNightMode = localStorage.getItem("nightMode");
+    if (storedNightMode === "true") {
+      nightModeSwitch.checked = true;
+    } else {
+      nightModeSwitch.checked = false;
+    }
+  
+    // Inicializar el modo según el estado almacenado
+    toggleNightMode();
+  });
 
 
 

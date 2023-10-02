@@ -1,6 +1,6 @@
 body {
-    color: white;
-    background-color: #111; 
+    color: black;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(22, 18, 17), rgb(27, 21, 17), rgba(34, 25, 24, 0.9));
     font-family: 'Verdana', serif !important;
 }
 
@@ -27,5 +27,13 @@ body {
 }
 
 .site-header .dropdown-menu a {
+    color: white;
+}
+
+/*Product-info*/
+#textCom2{
+    color: white;
+}
+#textCom{
     color: white;
 }
