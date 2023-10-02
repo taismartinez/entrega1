@@ -175,7 +175,8 @@ async function callJSONrel() {
         rel= data.relatedProducts
        
         console.log(rel)
-        return showInforel(rel)
+         showInforel(rel)
+         selectedRelProduct(rel)
     } catch (error) {
         console.log(error)
     }
@@ -191,7 +192,6 @@ function showInforel(rel) {
         <div class ="rel" id="${rel[i].id}" >
         <div class ="name">  <p >${rel[i].name}</p> </div>
        
-      
         <div class = "img">
         
         <img src=${rel[i].image} style="width:40%">
@@ -205,15 +205,19 @@ function showInforel(rel) {
 }
 
 
-//
-function selectedProduct(rel){
+
+function selectedRelProduct(rel){
     containerrel.addEventListener("click", (e) =>{
-        let selectRel = e.target.closest(".rel").id; // closest busca hacia "atrás" el elemento que coincida
-        localStorage.setItem("relidprod", selectRel)
+        let selectProd = e.target.closest(".rel").id; // closest busca hacia "atrás" el elemento que coincida
+        console.log(selectProd)
+        localStorage.setItem("Id-Prod", selectProd)
         window.location = "product-info.html"
-        console.log(selectRel)
     } )
 }
+
+showInforel(rel);
+
+
 
 
 // Modo noche
