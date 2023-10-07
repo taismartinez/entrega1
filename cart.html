@@ -50,7 +50,36 @@
       <div class="alert alert-danger text-center" role="alert">
         <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
       </div>
+
+       <!-- Sección del carrito -->
+       <h2>Mi Carrito</h2>
+       <ul id="carrito"></ul>
+       <p>Total: <span id="total">0</span> USD</p>
+       <button id="finalizarCompra" class="btn btn-primary">Finalizar Compra</button>
+       
     </div>
+    
+    <!-- Controles para Envio-->
+    <div id="controlesEnvio">
+      <h2>Tipo de Envío</h2>
+      <label for="tipoEnvio">Selecciona el tipo de envío:</label>
+      <select id="tipoEnvio">
+        <option value="estandar">Estándar</option>
+        <option value="express">Express</option>
+        <option value="sameDay">Entrega el mismo día</option>
+      </select>
+    
+      <h2>Dirección de Entrega</h2>
+      <label for="calle">Calle:</label>
+      <input type="text" id="calle"><br>
+    
+      <label for="numero">Número:</label>
+      <input type="text" id="numero"><br>
+    
+      <label for="esquina">Esquina:</label>
+      <input type="text" id="esquina"><br>
+    </div>
+    
   </main>
   <footer class="text-muted">
     <div class="container">
